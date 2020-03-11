@@ -14,11 +14,14 @@ and open the template in the editor.
         <?php
         require_once 'Caneta.php';
         
-        $c1 = new Caneta();
-        $c1->setModelo("Paraguai");
-        $c1->setPonta(0.5);
+        $c1 = new Caneta("Bicuda", "Azul", 0.5);
+        $c2 = new Caneta("kkkkk", "verde", 0.1);
+        print_r($c1);
+        print_r($c2);
+        //$c1->setModelo("Paraguai");
+        //$c1->setPonta(0.5);
        // $c1->ponta = 0.2; erro para demonstrar o private
-       echo "eu tenho uma caneta {$c1->getModelo()} de ponta {$c1->getPonta()}"
+       //echo "eu tenho uma caneta {$c1->getModelo()} de ponta {$c1->getPonta()}"
             
         
         ?>
