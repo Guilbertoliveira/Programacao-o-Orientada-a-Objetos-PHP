@@ -20,8 +20,15 @@ class Banco {
     private $status;
     
     
-    
-    public function abrirConta(){
+    function __construct($saldo, $status) {
+        $this->saldo = 0;
+        $this->status = FALSE;
+    }
+
+  
+    // metodos especificos
+    public function abrirConta($t){
+        this.setTipo($t);
         $this->status = true;
     }
     
