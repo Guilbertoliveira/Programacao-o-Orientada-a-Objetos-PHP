@@ -42,14 +42,15 @@ class Banco {
     }
     
      public function fecharConta(){
-         if ($this->getSaldo() > 0)
+         if ($this->getSaldo() > 1)
          {
              echo "<p> Conta ainda possui dinheiro </p> <br>";
-         } elseif ($this->getSaldo() < 0){
+         } elseif ($this->getSaldo() <= 0){
              echo "<p> Conta está em debito impossível encerrala </p> <br>";
          }
          else{
             $this->setStatus(false);
+            echo "Conta encerrada";
          }
         
     }

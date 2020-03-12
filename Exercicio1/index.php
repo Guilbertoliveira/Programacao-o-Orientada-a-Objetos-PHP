@@ -37,17 +37,32 @@ and open the template in the editor.
         echo "<br>";
         print_r($p2);
         
-        $p2->sacar(100);
-        $p1->sacar(300);
-        print_r($p2);
-        
-        $p1->pagarMensalidade();
-        $p2->pagarMensalidade();
+
         
         print_r($p1);
         echo "<br>";
         print_r($p2);
         
+   
+        $p1->sacar(238);
+        $p2->sacar(330);
+        print_r($p1);
+        echo "<br>";
+        print_r($p2);
+        
+        
+                $p1->sacar(311);
+        $p2->sacar(119);
+        print_r($p1);
+        echo "<br>";
+        print_r($p2);
+        
+        
+        $p1->fecharConta();
+        $p2->fecharConta();
+          print_r($p1);
+        echo "<br>";
+        print_r($p2);
         ?>
     </body></pre>
 </html>
