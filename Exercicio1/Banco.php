@@ -20,9 +20,10 @@ class Banco {
     private $status;
     
     
-    function __construct($saldo, $status) {
-        $this->saldo = 0;
-        $this->status = FALSE;
+    function __construct() {
+        $this->setSaldo(0);
+        $this->setStatus(false);
+        echo "Conta criada com sucesso <br>";
     }
 
   
@@ -54,13 +55,44 @@ class Banco {
     }
     
      public function depositar($x){
-         $this->setSaldo($x);
+        if($this->getStatus() == true)
+        {
+            $this->setSaldo($this->getSaldo() + $x);
+        }
+        else {
+            echo "<p> Conta fechada </p>";
+        }
     }
-    
  
+    public function sacar($v){
+        if($this->getStatus() )
+        { if ($this->getSaldo() > $v)
+        {
+            $this->setSaldo($this->getSaldo() - $x);
+        } else {
+            echo "Saldo insuficiente para saque";
+        }
+    } else {
+        echo "Conta não está aberta";
+    }}
     
      public function pagarMensalidade(){
+        if($this->getTipo() == "CC")
+        {
+            $v = 12;
+        }
+        elseif ($this->getTipo("CP"))
+        {
+            $v = 20;
+        }
         
+        if ($this->getStatus())
+        {
+            $this->setSaldo($this->getSaldo() - $v);
+        }
+        else{
+            echo "Não posso cobrar !";
+        }
     }
 
 
@@ -99,10 +131,12 @@ class Banco {
         $this->dono = $dono;
     }
 
+ 
     function setSaldo($saldo) {
         $this->saldo = $saldo;
     }
 
+    
     function setStatus($status) {
         $this->status = $status;
     }

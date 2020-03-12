@@ -9,9 +9,32 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
+    <body><pre>
         <?php
         require_once 'Banco.php';
+        
+        $p1 = new Banco;
+        $p2 = new Banco;
+        
+        $p1->abrirConta("CC");
+        $p1->setDono("Jubileu");
+        $p1->setNumConta(111111);
+        
+        $p2->abrirConta("CP");
+        $p2->setDono("Maria");
+        $p2->setNumConta(2222222);
+        
+        print_r($p1);
+        echo "<br>";
+        print_r($p2);
+        
+        $p1->depositar(200);
+        $p2->depositar(200);
+        
+        
+        print_r($p1);
+        echo "<br>";
+        print_r($p2);
         ?>
-    </body>
+    </body></pre>
 </html>
