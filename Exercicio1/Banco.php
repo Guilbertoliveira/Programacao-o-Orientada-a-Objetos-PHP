@@ -28,12 +28,29 @@ class Banco {
   
     // metodos especificos
     public function abrirConta($t){
-        this.setTipo($t);
-        $this->status = true;
+        $this->setTipo($t);
+        $this->setStatus(true);
+        if ($t == 'CC')
+        {
+            $this->setSaldo(50);
+        }
+        elseif ($t == "CP")
+        {
+            $this->setSaldo(150);
+        }
     }
     
      public function fecharConta(){
-        $this->status = false;
+         if ($this->getSaldo() > 0)
+         {
+             echo "<p> Conta ainda possui dinheiro </p> <br>";
+         } elseif ($this->getSaldo() < 0){
+             echo "<p> Conta está em debito impossível encerrala </p> <br>";
+         }
+         else{
+            $this->setStatus(false);
+         }
+        
     }
     
      public function depositar($x){
