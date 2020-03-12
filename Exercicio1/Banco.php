@@ -46,11 +46,11 @@ class Banco {
          {
              echo "<p> Conta ainda possui dinheiro </p> <br>";
          } elseif ($this->getSaldo() <= 0){
-             echo "<p> Conta está em debito impossível encerrala </p> <br>";
+             echo "<p> Conta está em debito impossível encerrada </p> <br>";
          }
          else{
             $this->setStatus(false);
-            echo "Conta encerrada";
+            echo "Conta encerrada <br>";
          }
         
     }
