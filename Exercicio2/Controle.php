@@ -67,7 +67,7 @@ class Controle implements Inter{
     public function maisVolume() {
         if ($this->getLigado())
         {
-            $this->setVolume($this->getVolume() + 1);
+            $this->setVolume($this->getVolume() + 5);
         }
         else {
             echo "TV não ligada";
@@ -77,7 +77,7 @@ class Controle implements Inter{
     public function menosVolume() {
         if ($this->getLigado())
         {
-            $this->setVolume($this->getTocando() - 1);
+            $this->setVolume($this->getTocando() - 5);
         }
         else{
             echo "TV desligada";
