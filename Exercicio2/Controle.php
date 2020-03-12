@@ -23,7 +23,7 @@ class Controle implements Inter{
         echo "<br> Está ligado ?: " . ($this->getLigado()?"Sim":"Não");
         echo "<br> Está tocando ?: " . ($this->getTocando()?"Sim":"Não");
         echo "<br> Volume: ". $this->getTocando();
-        for($i=0; i<= $this->getVolume(); $i+=2)
+        for($i=0; $i<= $this->getVolume(); $i+=2)
         {
             echo "|";
         }
@@ -85,10 +85,20 @@ class Controle implements Inter{
     }
 
     public function pause() {
-        
+        if($this->getLigado() && $this->getTocando())
+        {
+            $this->getTocando(false);
+        } else {
+            echo "não estava tocando nada ! ";
+        }
     }
 
     public function play() {
+        if ($this->getLigado() && $this->getTocando() == false)
+        {
+            $this->setTocando(true);
+        }
+        
         
     }
     

@@ -5,8 +5,18 @@
         <title></title>
     </head>
     <body>
+        <pre> CONTROLE REMOTO
         <?php
+        
+        require_once './Controle.php';
+        
+        $c = new Controle();
+        $c->ligar();
+        $c->abrirMenu();
+        
+        
+        
        
         ?>
-    </body>
+    </body></pre>
 </html>
