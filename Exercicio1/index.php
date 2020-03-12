@@ -28,13 +28,26 @@ and open the template in the editor.
         echo "<br>";
         print_r($p2);
         
-        $p1->depositar(200);
-        $p2->depositar(200);
+        $p1->depositar(500);
+        $p2->depositar(300);
+        
         
         
         print_r($p1);
         echo "<br>";
         print_r($p2);
+        
+        $p2->sacar(100);
+        $p1->sacar(300);
+        print_r($p2);
+        
+        $p1->pagarMensalidade();
+        $p2->pagarMensalidade();
+        
+        print_r($p1);
+        echo "<br>";
+        print_r($p2);
+        
         ?>
     </body></pre>
 </html>

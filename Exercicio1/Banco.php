@@ -68,7 +68,8 @@ class Banco {
         if($this->getStatus() )
         { if ($this->getSaldo() > $v)
         {
-            $this->setSaldo($this->getSaldo() - $x);
+            $this->setSaldo($this->getSaldo() - $v);
+            echo "Saque autorizado na conta " .$this->getDono(). "no valor de: ". $v. "<br>";
         } else {
             echo "Saldo insuficiente para saque";
         }
@@ -89,6 +90,7 @@ class Banco {
         if ($this->getStatus())
         {
             $this->setSaldo($this->getSaldo() - $v);
+            echo "A mensalidade do cliente ". $this->getDono(). "no valor: ". $v. "<br><br>";
         }
         else{
             echo "Não posso cobrar !";
