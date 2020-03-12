@@ -11,8 +11,10 @@
         require_once './Controle.php';
         
         $c = new Controle();
-        $c->ligar();
-        $c->abrirMenu();
+        
+        $c->maisVolume();
+
+        
         
         
         

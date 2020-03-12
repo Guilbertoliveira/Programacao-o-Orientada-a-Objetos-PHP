@@ -20,6 +20,7 @@ class Controle implements Inter{
     
     
     public function abrirMenu() {
+        echo "<br> -----ABRIR MENU ------- <br>";
         echo "<br> Está ligado ?: " . ($this->getLigado()?"Sim":"Não");
         echo "<br> Está tocando ?: " . ($this->getTocando()?"Sim":"Não");
         echo "<br> Volume: ". $this->getTocando();
@@ -31,6 +32,8 @@ class Controle implements Inter{
 
     public function desligar() {
         $this->setLigado(false);
+        $this->setTocando(false);
+        $this->setVolume(0);
     }
 
     public function desligarMudo() {
@@ -114,27 +117,27 @@ class Controle implements Inter{
     
     
     // getters e setters
-    function getVolume() {
+    private function getVolume() {
         return $this->volume;
     }
 
-    function getLigado() {
+    private function getLigado() {
         return $this->ligado;
     }
 
-    function getTocando() {
+    private function getTocando() {
         return $this->tocando;
     }
 
-    function setVolume($volume) {
+    private function setVolume($volume) {
         $this->volume = $volume;
     }
 
-    function setLigado($ligado) {
+    private function setLigado($ligado) {
         $this->ligado = $ligado;
     }
 
-    function setTocando($tocando) {
+    private function setTocando($tocando) {
         $this->tocando = $tocando;
     }
 
