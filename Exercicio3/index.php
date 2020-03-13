@@ -9,9 +9,25 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
+    <body> <pre>
         <?php
-        // put your code here
+        
+                require_once './Lutador.php';
+
+                
+            $l = array();
+            $l[0] = new Lutador('jose', 'brasileiro', 22, 1.80, 75.3, 15, 2, 0);
+            $l[1] = new Lutador('creude', 'chinês', 45, 1.70, 60.5, 10, 2, 3);
+            
+            $l[0]->status();
+            
+            $l[0]->ganharLuta();
+            $l[0]->perderLuta();
+            $l[0]->empatarLuta();
+            $l[0]->status();
+            $l[0]->status();
+            
+            
         ?>
-    </body>
+    </body></pre>
 </html>

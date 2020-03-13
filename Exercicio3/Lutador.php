@@ -23,10 +23,7 @@ class Lutador {
    private $empates;
    
    
-   public function apresentar ()
-   {
-       
-   }
+   
    
    public function status ()
    {
@@ -126,25 +123,25 @@ class Lutador {
            echo "<br> peso invalido";
        }
        else if ($this->peso<70.3) {
-           echo "<br> peso leve";
+     
            $this->categoria = "leve";
    }else if ($this->peso<= 83.9) {
-           echo "<br> peso médio";
+       
            $this->categoria = "médio";
    } else if ($this->peso<=120.2) {
-           echo "<br> peso pesado";
+           
    $this->categoria = "pesado"; }
    else {     $this->categoria = "invalido";}}
 
-   public function setVitorias($vitorias) {
+private function setVitorias($vitorias) {
        $this->vitorias = $vitorias;
    }
 
-   public function setDerrotas($derrotas) {
+   private function setDerrotas($derrotas) {
        $this->derrotas = $derrotas;
    }
 
-   public function setEmpates($empates) {
+   private function setEmpates($empates) {
        $this->empates = $empates;
    }
 
