@@ -54,7 +54,7 @@ class Lutador {
        $this->nacionalidade = $nacionalidade;
        $this->idade = $idade;
        $this->altura = $altura;
-       $this->peso = $peso;
+       $this->setPeso($peso);
        $this->vitorias = $vitorias;
        $this->derrotas = $derrotas;
        $this->empates = $empates;
@@ -115,11 +115,26 @@ class Lutador {
 
    function setPeso($peso) {
        $this->peso = $peso;
+       $this->setCategoria($peso);
    }
 
-   function setCategoria($categoria) {
-       $this->categoria = $categoria;
-   }
+   private function setCategoria($categoria) {
+       
+       
+       if($this->peso<52.2)
+       {
+           echo "<br> peso invalido";
+       }
+       else if ($this->peso<70.3) {
+           echo "<br> peso leve";
+           $this->categoria = "leve";
+   }else if ($this->peso<= 83.9) {
+           echo "<br> peso médio";
+           $this->categoria = "médio";
+   } else if ($this->peso<=120.2) {
+           echo "<br> peso pesado";
+   $this->categoria = "pesado"; }
+   else {     $this->categoria = "invalido";}}
 
    function setVitorias($vitorias) {
        $this->vitorias = $vitorias;
