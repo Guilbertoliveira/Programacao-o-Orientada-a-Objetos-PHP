@@ -30,22 +30,22 @@ class Lutador {
    
    public function status ()
    {
-       
+       echo "<br> O Lutador: " .$this->getNome(). "<br> Da Origem de: " .$this->getNacionalidade(). "<br> Com a idade de  " .$this->getIdade(). "<br> Com a altura de: " .$this->getAltura(). "<br> Pesando: " .$this->getPeso(). "<br> Ganhando: " .$this->getVitorias(). "<br> Empatando: " .$this->getEmpates(). "<br> Perdendo: " .$this->getDerrotas(). "<br><br>";
    }
    
    public function ganharLuta()
    {
-       
+       $this->setVitorias($this->getVitorias() + 1); 
    }
    
    public function perderLuta()
    {
-       
+       $this->setDerrotas($this->getDerrotas() + 1);
    }
    
    public function empatarLuta()
    {
-       
+       $this->setEmpates($this->getEmpates() + 1);
    }
    
    // construtor
@@ -61,59 +61,59 @@ class Lutador {
    }
 
    // getters e setters
-   function getNome() {
+   private function getNome() {
        return $this->nome;
    }
 
-   function getNacionalidade() {
+   private function getNacionalidade() {
        return $this->nacionalidade;
    }
 
-   function getIdade() {
+   private function getIdade() {
        return $this->idade;
    }
 
-   function getAltura() {
+   private function getAltura() {
        return $this->altura;
    }
 
-   function getPeso() {
+   private function getPeso() {
        return $this->peso;
    }
 
-   function getCategoria() {
+   private function getCategoria() {
        return $this->categoria;
    }
 
-   function getVitorias() {
+   private function getVitorias() {
        return $this->vitorias;
    }
 
-   function getDerrotas() {
+   private function getDerrotas() {
        return $this->derrotas;
    }
 
-   function getEmpates() {
+   private function getEmpates() {
        return $this->empates;
    }
 
-   function setNome($nome) {
+   private function setNome($nome) {
        $this->nome = $nome;
    }
 
-   function setNacionalidade($nacionalidade) {
+   private function setNacionalidade($nacionalidade) {
        $this->nacionalidade = $nacionalidade;
    }
 
-   function setIdade($idade) {
+   private function setIdade($idade) {
        $this->idade = $idade;
    }
 
-   function setAltura($altura) {
+   private function setAltura($altura) {
        $this->altura = $altura;
    }
 
-   function setPeso($peso) {
+   private function setPeso($peso) {
        $this->peso = $peso;
        $this->setCategoria($peso);
    }
@@ -136,15 +136,15 @@ class Lutador {
    $this->categoria = "pesado"; }
    else {     $this->categoria = "invalido";}}
 
-   function setVitorias($vitorias) {
+   public function setVitorias($vitorias) {
        $this->vitorias = $vitorias;
    }
 
-   function setDerrotas($derrotas) {
+   public function setDerrotas($derrotas) {
        $this->derrotas = $derrotas;
    }
 
-   function setEmpates($empates) {
+   public function setEmpates($empates) {
        $this->empates = $empates;
    }
 
