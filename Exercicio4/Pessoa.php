@@ -19,7 +19,7 @@ class Pessoa {
     
     public function fazerAniver()
     {
-        
+        $this->setIdade($this->getIdade() + 1);
     }
     
     

@@ -3,9 +3,9 @@
 
 interface Publicação {
  
-    public abstract function abrir();
+    public  function abrir();
     public function fechar();
-    public function folhear();
+    public function folhear($p);
     public function avançarPag();
     public function voltarPag();
 }
