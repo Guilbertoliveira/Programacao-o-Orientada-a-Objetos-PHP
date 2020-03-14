@@ -78,7 +78,7 @@ class Lutador {
        return $this->peso;
    }
 
-   private function getCategoria() {
+   public function getCategoria() {
        return $this->categoria;
    }
 
@@ -123,13 +123,16 @@ class Lutador {
            echo "<br> peso invalido";
        }
        else if ($this->peso<70.3) {
-     
+           echo '<br> peso leve ' .$this->getNome();
+           echo '<br>';
            $this->categoria = "leve";
    }else if ($this->peso<= 83.9) {
-       
-           $this->categoria = "médio";
+       echo '<br> peso medio '.$this->getNome();
+        echo '<br>';
+           $this->categoria = "médio" ;
    } else if ($this->peso<=120.2) {
-           
+           echo '<br> peso pesado ' .$this->getNome();
+            echo '<br>';
    $this->categoria = "pesado"; }
    else {     $this->categoria = "invalido";}}
 
