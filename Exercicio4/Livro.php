@@ -18,7 +18,7 @@ class Livro implements Publicação{
     
     public function detalhes()
     {
-        echo "<br> Livro do autor: ". $this->getAutor(). "<br> Com total de paginas de: " .$this->getTotPaginas(). "<br> Sendo lido por: " .$this->leitor->getNome(). "<br> Livro se encontra: ".$this->getAberto(). "<br> E está na pagina: ". $this->getPagAtual();
+        echo "<hr><br> Livro do autor: ". $this->getAutor(). "<br> Com total de paginas de: " .$this->getTotPaginas(). "<br> Sendo lido por: " .$this->leitor->getNome(). "<br> Livro se encontra: ".$this->getAberto(). "<br> E está na pagina: ". $this->getPagAtual();
     }
     
     
@@ -122,21 +122,44 @@ class Livro implements Publicação{
     
         // clases que necessitam ser feitaaas
     public function abrir() {
-        $this->setAberto(true);
+        if($this->getAberto())
+        {
+            echo "o livro ja está aberto !";
+        }
+        else
+        {
+            $this->setAberto(true);    
+        }
+        
     }
 
     public function avançarPag() {
-        $this->setPagAtual($this->getPagAtual() + 1);
+         if(($this->getPagAtual() > 0) && ($this->getPagAtual() < $this->getTotPaginas()))
+         {
+            $this->setPagAtual($this->getPagAtual() + 1);
+         }
+         else{
+             echo "impossivel de avançar";
+         }
+        
     }
 
     public function fechar() {
-        $this->setAberto(false);
+        if($this->getAberto() == false)
+        {
+            echo "O livro ja está fechado";
+        }
+        else
+        {
+            $this->setAberto(false);    
+        }
+        
     }
 
     public function folhear($p) {
         if ($p > $this->getTotPaginas())
         {
-            echo "<br> impossível de realizar essa ação o numero de pagina excedida";
+            echo "<br> Impossível de realizar essa ação o numero de pagina excedida";
         }
         else {
             $this->setPagAtual($p);
@@ -144,7 +167,14 @@ class Livro implements Publicação{
     }
 
     public function voltarPag() {
-        $this->setPagAtual($this->getPagAtual() - 1);
+        if(($this->getPagAtual() > 0) && ($this->getPagAtual() < $this->getTotPaginas()))
+        {
+            $this->setPagAtual($this->getPagAtual() - 1);
+        }
+        else{
+            echo "<br> Impossivel retornar pagina";
+        }
+        
     }
 
 }

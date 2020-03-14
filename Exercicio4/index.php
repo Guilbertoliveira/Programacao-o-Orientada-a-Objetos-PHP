@@ -28,8 +28,14 @@ and open the template in the editor.
         
         $livro1->detalhes();
         $livro1->abrir();
-        $livro1->avançarPag();
-        $livro1->detalhes();
+        $livro1->folhear(301);
+       
+        
+        
+        
+        
+        
+        
         ?>
     </body></pre>
 </html>
