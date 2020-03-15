@@ -11,11 +11,11 @@
  *
  * @author guilb
  */
-abstract class Pessoa  {
+abstract class Pessoa  { //não pode ser instanciada no index
  
-    private $nome;
-    private $idade;
-    private $sexo;
+    protected $nome;
+    protected $idade;
+    protected $sexo;
     
     public function fazerAniversario() //metodo final não pode ser sobrescrito
     {

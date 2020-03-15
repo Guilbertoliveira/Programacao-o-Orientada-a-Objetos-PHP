@@ -12,13 +12,24 @@
  * @author guilb
  */
 require_once './Aluno.php';
+
 class Bolsista extends Aluno{
    
         
         private $bolsa;
-        
+
        public function renovarBolsa()
        {
-           
+           echo  "<br> Bolsa renovada";
        }
+       
+       function getBolsa() {
+           return $this->bolsa;
+       }
+
+       function setBolsa($bolsa) {
+           $this->bolsa = $bolsa;
+       }
+
+
 }

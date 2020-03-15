@@ -22,11 +22,14 @@ class Aluno extends Pessoa {
     
     public function pagarMensalidade()
     {
-        echo "<br> mensalidade paga !";
+        echo "<br> mensalidade paga ! $this->nome";
     }
     
     
-    function __construct($matricula, $curso) {
+    function __construct($matricula, $curso, $nome, $idade, $Sexo) {
+        $this->nome = $nome;
+        $this->sexo = $Sexo;
+        $this->idade = $idade;
         $this->matricula = $matricula;
         $this->curso = $curso;
     }
