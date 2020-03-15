@@ -19,7 +19,7 @@ class Funcionario extends Pessoa{
     
     public function mudarTrabalho()
     {
-        $this->setTrabalhando(! $this->trabalhando);
+        $this->trabalhando = !$this->trabalhando;
     }
     
     

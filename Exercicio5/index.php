@@ -28,6 +28,29 @@ and open the template in the editor.
         $p2->setNome("clerivaldo");
         $p3->setNome("pedro");
         
+        $p3->setTrabalhando(true);
+        $p1->setIdade(20);
+        $p2->setSalario(2000);
+        $p3->setSetor("marketing");
+        
+        print_r($p1);
+        print_r($p);
+        print_r($p2);
+        print_r($p3);
+        
+        echo "<hr>";
+        $p1->fazerAniv();
+        
+        $p2->setEspecialidade("informatica");
+        $p2->ReceberAum(300);
+        $p3->mudarTrabalho();
+        
+        
+        
+        
+        
+        
+        
         print_r($p1);
         print_r($p);
         print_r($p2);
