@@ -7,14 +7,18 @@
  */
 
 /**
- * Description of Visitante
+ * Description of Bolsista
  *
  * @author guilb
  */
-require_once './Pessoa.php';
-class Visitante extends Pessoa{ //heraçã pobre
-
-    
-    
-    
+require_once './Aluno.php';
+class Bolsista extends Aluno{
+   
+        
+        private $bolsa;
+        
+       public function renovarBolsa()
+       {
+           
+       }
 }

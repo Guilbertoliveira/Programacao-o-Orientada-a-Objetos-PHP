@@ -11,7 +11,8 @@
  *
  * @author guilb
  */
-class Aluno {
+require_once './Pessoa.php';
+class Aluno extends Pessoa {
     
     
     

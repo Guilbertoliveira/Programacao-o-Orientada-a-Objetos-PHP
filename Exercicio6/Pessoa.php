@@ -11,13 +11,13 @@
  *
  * @author guilb
  */
-class Pessoa {
+abstract class Pessoa  {
  
     private $nome;
     private $idade;
     private $sexo;
     
-    public function fazerAniversario()
+    public function fazerAniversario() //metodo final não pode ser sobrescrito
     {
         $this->setIdade($this->getIdade() + 1 );
     }
