@@ -44,6 +44,7 @@ and open the template in the editor.
         $p2->setEspecialidade("informatica");
         $p2->ReceberAum(300);
         $p3->mudarTrabalho();
+        $p1->cancelarMatr();
         
         
         
