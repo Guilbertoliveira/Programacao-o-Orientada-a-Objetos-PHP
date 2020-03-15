@@ -18,6 +18,12 @@ class Bolsista extends Aluno{
         
         private $bolsa;
 
+        
+         public function pagarMensalidade()  //sobrepondo metodo do aluno.php
+         {
+             echo "<br><br> O bolsista tem desconto ! "  .$this->nome. "<br><br>";
+         }
+    
        public function renovarBolsa()
        {
            echo  "<br> Bolsa renovada";

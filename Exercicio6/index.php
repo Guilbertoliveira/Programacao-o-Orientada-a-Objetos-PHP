@@ -14,24 +14,27 @@ and open the template in the editor.
        require_once './Visitante.php';
        require_once './Aluno.php';
        require_once './Bolsista.php';
+       require_once './Professor.php';
+       require_once './Tecnico.php';
        
        
       // $p1 = new Pessoa; não pode pois é abstract a classe pessoa
        $v1 = new Visitante(); // visitante herança pobre (sem adição de atributos e metodos)
-       $v1->setNome("jose");
-       $v1->setIdade(11);
-       $v1->setSexo("M");
        print_r($v1);
-        
-       
-       $a = new Aluno("12121", "ads", "Guilbert", 22, "masculino");
+         echo "<hr>";
+       $a = new Aluno();
        print_r($a);
+       
        echo "<hr>";
        
-       $b = new Bolsista("1111",    "ads"   , "Valquiria", 32, "feminino");
-       $b->setBolsa(true);
+       $b = new Bolsista();
        print_r($b);
-     
+      echo "<hr>";
+       $t = new Tecnico();
+       print_r($t);
+        echo "<hr>";
+       $p = new Professor("Cantor", 1500);
+       print_r($p);
     
         
         

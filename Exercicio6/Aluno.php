@@ -12,7 +12,7 @@
  * @author guilb
  */
 require_once './Pessoa.php';
-class Aluno extends Pessoa {
+class Aluno extends Pessoa {  //colocar final antes do class faz com que bolsista não possa herdar a classe aluno
     
     
     
@@ -20,19 +20,13 @@ class Aluno extends Pessoa {
     private $curso;
     
     
-    public function pagarMensalidade()
+    public  function pagarMensalidade() //faz com que não possa ser sobreposto esse metodo "final" public final function pagarMensalidade()
     {
         echo "<br> mensalidade paga ! $this->nome";
     }
     
     
-    function __construct($matricula, $curso, $nome, $idade, $Sexo) {
-        $this->nome = $nome;
-        $this->sexo = $Sexo;
-        $this->idade = $idade;
-        $this->matricula = $matricula;
-        $this->curso = $curso;
-    }
+ 
 
     
     function getMatricula() {
