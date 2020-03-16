@@ -18,6 +18,6 @@ class Tartaruga extends Reptil{
     
     public function locomover()
     {
-        echo "<br> andando devagar";
+        echo "<br> andando devagar <br><br>";
     }
 }
