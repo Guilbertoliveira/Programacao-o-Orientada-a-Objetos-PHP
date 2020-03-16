@@ -57,6 +57,7 @@ and open the template in the editor.
         echo "<br><br>";
         $c = new Canguru();
         $c->locomover();
+        $c->alimentar();
         print_r($c);
         
         echo "<br><br>";
