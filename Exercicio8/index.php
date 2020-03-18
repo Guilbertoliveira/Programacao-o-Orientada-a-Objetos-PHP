@@ -17,19 +17,26 @@ and open the template in the editor.
         require_once './Vizualizacao.php';
         
         $v[0] = new Video("Naruto");
-        print_r($v);
-        print_r($v[0]);
-        
+        $v[1] = new Video("kiba");
+     
         
         $p = new Pessoa("jubileu", 18, "Masculino");
-        print_r($p);
+     
         
         
         $g = new Gafanhoto("jose", "22", "M", "jubis2");
-        print_r($g);
         
+        echo '<hr>';
         $vis = new Vizualizacao($g, $v[0]);
+        $vis->avaliar();        
         print_r($vis);
+        echo '<hr>';
+        
+        $vis2 = new Vizualizacao($g, $v[1]);
+        $vis2->avaliarPorc(40);
+        print_r($vis2);
+      
+        
         
         
         ?>
