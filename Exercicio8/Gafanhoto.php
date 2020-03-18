@@ -19,8 +19,15 @@ class Gafanhoto extends Pessoa {
     
     public function viuMaisUm()
     {
-        
+        $this->totAssistido ++; 
     }
+    
+    function __construct($nome, $idade, $sexo, $login) {
+        parent::__construct($nome, $idade, $sexo); // super do java aqui é utilizando parent
+        $this->login = $login;
+        $this->setTotAssistido(0);
+    }
+
     
     
     

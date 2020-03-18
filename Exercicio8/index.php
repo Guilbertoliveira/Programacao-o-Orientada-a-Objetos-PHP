@@ -9,9 +9,23 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
+    <body><pre>
         <?php
-        // put your code here
+        require_once './Video.php';
+        require_once './Pessoa.php';
+        require_once './Gafanhoto.php';
+        
+        $v[0] = new Video("Naruto");
+        print_r($v);
+        print_r($v[0]);
+        
+        
+        $p = new Pessoa("jubileu", 18, "Masculino");
+        print_r($p);
+        
+        
+        $g = new Gafanhoto("jose", "22", "M", "jubis2");
+        print_r($g);
         ?>
-    </body>
+    </body></pre>
 </html>

@@ -20,17 +20,26 @@ class Video implements AcoesVideo{
     private $reproduzindo;
     
     
+    function __construct($titulo) {
+        $this->titulo = $titulo;
+        $this->avaliacao = 1;
+        $this->views = 0;
+        $this->curtidas = 0;
+        $this->reproduzindo = false;
+    }
+
+    
     
     public function like() {
-        
+        $this->setCurtidas($this->getCurtidas() + 1);
     }
 
     public function pause() {
-        
+        $this->setReproduzindo(false);  
     }
 
     public function play() {
-        
+        $this->setReproduzindo(true);      
     }
     
     
