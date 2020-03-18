@@ -14,6 +14,7 @@ and open the template in the editor.
         require_once './Video.php';
         require_once './Pessoa.php';
         require_once './Gafanhoto.php';
+        require_once './Vizualizacao.php';
         
         $v[0] = new Video("Naruto");
         print_r($v);
@@ -26,6 +27,11 @@ and open the template in the editor.
         
         $g = new Gafanhoto("jose", "22", "M", "jubis2");
         print_r($g);
+        
+        $vis = new Vizualizacao($g, $v[0]);
+        print_r($vis);
+        
+        
         ?>
     </body></pre>
 </html>
