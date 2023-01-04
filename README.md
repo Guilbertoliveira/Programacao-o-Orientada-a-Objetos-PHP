@@ -1,2 +1,2 @@
-# Programação Orientada a Objetos
- Curso voltado à Programação Orientada a Objetos
+# Object Oriented Programming
+Learning OOP using PHP
